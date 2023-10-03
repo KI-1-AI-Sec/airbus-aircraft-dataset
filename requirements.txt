@@ -1,0 +1,11 @@
+numpy
+pandas
+torch
+Pillow  # PIL is part of the Pillow package
+tqdm
+IPython
+matplotlib
+ultralytics
+albumentations
+jupyter
+ipywidgets
