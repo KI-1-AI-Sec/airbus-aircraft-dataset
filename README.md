@@ -2,6 +2,29 @@
 
 This dataset is a demonstration version of larger and more advanced deep learning datasets created from Airbus satellite imagery. It is provided for demonstration purpose only.
 
+## Custom modifications
+
+Customization has been done to convert the jupyter notebook into an executable Python script which cuts up training images into tiles and labels, and splits them between the `images` and `val` directory
+
+### Usage
+
+To use the train and val datasets with YOLOv7 or YOLOv8, simply copy the folders into your yolo directory and perform training as normal
+
+### Run the generation script
+
+The customized Python script has been included to allow you to reproduce the train and val datasets if you wish to do it on your own:
+
+```bash
+pip install -r requirements.txt
+```
+
+Then (while cd'd into a directory containing `images` and `annotations.csv` from the airbus dataset):
+
+```bash
+python3 gen_dataset.py
+```
+
+
 ## Background
 
 [Airbus Defense and Space Intelligence](https://www.intelligence-airbusds.com/) operates the largest commercial satellite constellation combining optical imagery from Pléiades, SPOT, Vision-1 and DMC as well as the radar constellation (consisting of TerraSAR-X, TanDEM-X and PAZ). We are further expanding our sensor capabilities with the upcoming Pléiades Neo constellation providing higher resolution, greater revisits and more acquisition capabilities.
@@ -18,11 +41,11 @@ All aircrafts have been annotated with bounding boxes on the provided imagery. T
 
 ## Extra imagery
 
-A folder named `extras` contains 6 extra images which are not annotated but could be used to test a model on new - unseen before - images. 
+A folder named `extras` contains 6 extra images which are not annotated but could be used to test a model on new - unseen before - images.
 
 ## License
 
-This data is licensed under the [**Creative Commons BY-NC-SA 4.0 International**](https://creativecommons.org/licenses/by-nc-sa/4.0/) license: 
+This data is licensed under the [**Creative Commons BY-NC-SA 4.0 International**](https://creativecommons.org/licenses/by-nc-sa/4.0/) license:
 
 You are free to :
 - **Share** — copy and redistribute the material in any medium or format
@@ -35,6 +58,6 @@ as long as you follow the following terms:
 
 ## Contact
 
-**We welcome feedback and comments!** This dataset was curated by [jeffaudi](https://twitter.com/jeffaudi) for [Airbus DS Intelligence](https://www.intelligence-airbusds.com/) and annotations provided by [Appen](https://appen.com/). 
+**We welcome feedback and comments!** This dataset was curated by [jeffaudi](https://twitter.com/jeffaudi) for [Airbus DS Intelligence](https://www.intelligence-airbusds.com/) and annotations provided by [Appen](https://appen.com/).
 
-Please contact our [sales team](https://www.intelligence-airbusds.com/contact/) for any question related to our satellite imagery offer or to our **OneAtlas** digital services. 
+Please contact our [sales team](https://www.intelligence-airbusds.com/contact/) for any question related to our satellite imagery offer or to our **OneAtlas** digital services.
